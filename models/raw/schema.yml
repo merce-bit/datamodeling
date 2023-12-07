@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw
+    database: dwh
+    schema: raw
+    tables:
+      - name: nav9_nl_sales_header
+      - name: nav9_nl_sales_line
+      - name: nav9_nl_sales_invoice_header
+      - name: nav9_nl_sales_invoice_line
+      - name: nav9_sl_sales_price
+      - name: nav9_sl_salesperson_purchaser
+      - name: nav9_sl_currency
+      - name: nav9_sl_item
+      - name: nav9_sl_customer
+      - name: nav9_sl_payment_method
+      - name: nav9_shipment_method
+      - name: nav9_shipping_agent
