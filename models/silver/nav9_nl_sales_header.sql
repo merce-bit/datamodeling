@@ -1,4 +1,8 @@
-{{ config(materialized="table") }}
+{{ 
+    config(
+            materialized='table'
+          ) 
+}}
 
 select
     "Document Type",
@@ -34,15 +38,12 @@ select
     ship,
     invoice,
     "Print Posted Documents",
-    "Prepmt_ Cr_ Memo No_",
-    "Last Prepmt_ Cr_ Memo No_",
     "VAT Registration No_",
     "Combine Shipments",
     "Gen_ Bus_ Posting Group",
     "VAT Country_Region Code",
     "Sell-to Customer Name",
     "Sell-to Address",
-    "Sell-to Address 2",
     "Sell-to City",
     "Sell-to Contact",
     "Bill-to Post Code",
@@ -51,15 +52,12 @@ select
     "Sell-to Country_Region Code",
     "Ship-to Post Code",
     "Ship-to Country_Region Code",
-    "Bal_ Account Type",
-    correction,
     "Document Date",
     "Shipping Agent Code",
     "Package Tracking No_",
     "No_ Series",
     "Posting No_ Series",
     "Shipping No_ Series",
-    "Tax Liable",
     "VAT Bus_ Posting Group",
     reserve,
     "VAT Base Discount _",
@@ -89,7 +87,6 @@ select
     "Shipping Agent Service Code",
     receive,
     "Return Receipt No_",
-    "Return Receipt No_ Series",
     "Allow Line Disc_",
     "Get Shipment Used",
     load_timestamp,
