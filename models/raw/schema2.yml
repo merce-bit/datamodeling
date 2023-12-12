@@ -28,5 +28,5 @@ sources:
 
       - name: nav9_sl_shipment_method
 
-      - name: nav9_sl_shipment_agent
+      - name: nav9_sl_shipping_agent
   
