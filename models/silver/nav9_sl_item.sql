@@ -29,8 +29,6 @@ select
     "Tariff No_",
     "Last Date Modified",
     "Gen_ Prod_ Posting Group",
-    picture,
-    "VAT Prod_ Posting Group",
     "Low-Level Code",
     "Lot Size",
     "Last Unit Cost Calc_ Date",
