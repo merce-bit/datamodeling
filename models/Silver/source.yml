@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    database: dwh
+    schema: raw
+
+    tables:
+      - name: nav9_nl_sales_header
+        description: 'test category'
+
+      - name: nav9_sl_salesperson_purchaser
+        description: ''
+
+      - name: nav9_sl_customer
+        description: ''
