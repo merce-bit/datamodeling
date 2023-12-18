@@ -2,8 +2,8 @@
 
 select
     "Document Type"                         AS       "DOCUMENT_TYPE",
-    no_                                     AS       "PRIMARY_KEY",
-    "Sell-to Customer No_"                  AS       "SELL_TO_CUSTOMER_NO",
+    "no_"                                     AS      "PRIMARY_KEY",
+    "Sell-to Customer No_"                  AS       "CUSTOMER ID",
     "Bill-to Customer No_"                  AS       "BILL_TO_CUSTOMER_NO",
     "Bill-to Name"                          AS       "BILL_TO_NAME",
     "Bill-to Address"                       AS       "BILL_TO_ADDRESS",
@@ -66,7 +66,7 @@ select
     "Shipping Time"                         AS       "SHIPPING_TIME",
     "Outbound Whse_ Handling Time"          AS       "OUTBOUND_WHSE_HANDLING_TIME",
     "Shipping Agent Service Code"           AS       "SHIPPING_AGENT_SERVICE_CODE",
-    load_timestamp                          AS       "LOAD_TIMESTAMP",
-    source_system                           AS       "SOURCE_SYSTEM "
+    "load_timestamp"                        AS       "LOAD_TIMESTAMP",
+    "source_system"                         AS       "SOURCE_SYSTEM "
 
 from {{ source("raw", "nav9_nl_sales_header") }}

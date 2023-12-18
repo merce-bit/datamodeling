@@ -2,7 +2,7 @@
 
 select
     "timestamp",
-    no_,
+    no_ AS "CUSTOMER ID",
     "Name",
     "Search Name",
     address,
