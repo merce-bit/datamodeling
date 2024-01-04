@@ -5,11 +5,12 @@
 {{
    config(
 
+   target_database='dwh',
+    target_schema='raw',
+    unique_key='no_',
 
-        target_schema='raw',      
-    strategy='check',      
-    unique_key='no_',      
-    check_cols=['load_timestamp'] 
+    strategy='timestamp', 
+    updated_at='load_timestamp'
    )
 }}
 
