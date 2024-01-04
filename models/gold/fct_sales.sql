@@ -1,17 +1,12 @@
 {{ config(materialized="view") }}
 
-with customer as (
+with line as (
  
     select
-    "CUSTOMER ID"
-    , "Name"
-    , address
-    , city
-    , contact
-    , "Territory Code"
+    "Document No_"
  
  
-    from {{ ref('nav9_sl_customer') }}
+    from {{ ref('CRT_SALES_LINE') }}
  
  
 )
@@ -27,5 +22,7 @@ with customer as (
  
     from {{ ref('CRT_FCT_SALES_HEADER') }} as sale
 
-        left join customer as cust
-        on sale."CUSTOMER ID" = cust."CUSTOMER ID"
+    left join line
+    on sale."PRIMARY_KEY" = line."Document No_"
+--   and sale.sales_header_hashkey = line.sales_line_hashkey
+

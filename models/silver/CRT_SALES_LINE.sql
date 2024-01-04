@@ -2,7 +2,7 @@
 
 select
     "timestamp"                                     ,
-    "Document No_"                                  ,
+    "Document No_"          as ID                         ,
     "Line No_"                                      ,
     "Sell-to Customer No_"                          ,
     no_                                             ,
