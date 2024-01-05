@@ -6,10 +6,11 @@
 ) }}
 
 -- Creëer de hashkey op basis van de gecombineerde gegevens
-with merged_sales as (
+
 SELECT
     sales."no_",
     line."Document No_"
+    ,md5(line."Document No_" || sales."no_") as hash_key
     ,sales."Sell-to Customer No_" as "Selling_cust"
     ,sales."Bill-to Customer No_" as "Billing_cust"
     ,sales."Bill-to Name" as "Name"
@@ -27,13 +28,5 @@ ON
     sales."no_" = line."Document No_"
 
 
-)
-
-select
-  "no_",
-  "Document No_",
-   md5("Document No_" || "no_") as hash_key
-from
-  merged_sales
 
 

@@ -6,10 +6,11 @@
 ) }}
 
 -- Creëer de hashkey op basis van de gecombineerde gegevens
-with merged_invoices as (
+
 SELECT
     header."No_"
     ,line."Document No_"
+    ,md5("Document No_" || "No_") as hash_key
     ,header."Sell-to Customer No_" as "Selling_cust"
     ,header."Bill-to Customer No_" as "Billing_cust"
     ,header."Bill-to Name" as "Name"
@@ -27,13 +28,6 @@ ON
     header."No_" = line."Document No_"
 
 
-)
 
-select
-  "No_",
-  "Document No_",
-   md5("Document No_" || "No_") as hash_key
-from
-  merged_invoices
 
 
