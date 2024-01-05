@@ -13,6 +13,8 @@
  
  
 SELECT *
+
+,md5("no_" || "Last Date Modified") as "customer_key_hist"
  
 from {{source("raw", "nav9_sl_customer")}}
  
